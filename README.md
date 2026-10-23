@@ -5,8 +5,6 @@ project compares six training strategies on NIH ChestX-ray14 using a shared
 ImageNet-pretrained ResNet-152. It examines overall performance, rare-pathology
 recognition, and how co-occurring labels affect missed cases and false alarms.
 
-See the [research report](research_report.pdf) for methods and full analysis.
-
 ## Results
 
 Test performance (%), mean ± sample standard deviation across three seeds.
