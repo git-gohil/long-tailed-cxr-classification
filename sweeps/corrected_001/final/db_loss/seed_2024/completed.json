@@ -1,0 +1,20 @@
+{
+  "method": "db_loss",
+  "seed": 2024,
+  "settings": {
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "batch_size": 16,
+    "epochs": 30,
+    "patience": 7,
+    "gradient_clip": 1.0,
+    "num_workers": 4,
+    "db_neg_scale": 2,
+    "db_map_beta": 0.2
+  },
+  "output_sha256": {
+    "config.json": "b97778ceccc0daf58c22223b7c47c59abbc9c2db89bbb845de9bc073cc81f7d1",
+    "checkpoint_best.pt": "fa819b5b639ad31ea9b4c1fdd87158722598c9872203a7e850b431efb83d4bd3",
+    "validation_metrics.json": "90b37126b65570a7c3a51f22114e8a760a902eadab1afca50b3eb49da6a06efa"
+  }
+}

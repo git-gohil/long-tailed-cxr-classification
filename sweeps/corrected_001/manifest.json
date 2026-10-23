@@ -1,0 +1,267 @@
+{
+  "training_protocol": "corrected_v2",
+  "source_sha256": {
+    "/home-mscluster/pgohil/cxr-research/common/metrics.py": "c6340e612353b5affc0194c355d41f36ad9708fe77cfe090b85efb456a6c2e0d",
+    "/home-mscluster/pgohil/cxr-research/common/run_state.py": "4fc54d13af469bf7ce304c69db50e32d578cc2bb2a2ecaf590093c53544c7349",
+    "/home-mscluster/pgohil/cxr-research/common/nih_longtail.py": "0303fe3c78c7a69d1c7beddb34b227444ee4567f3f4a0c4f690f63d3ac3c2ebd",
+    "/home-mscluster/pgohil/cxr-research/evaluate.py": "abf6bf46550877f52e1888f7abc63868cd4c6d0d191b8601949774ef7cff6857",
+    "/home-mscluster/pgohil/cxr-research/2. Degraded Performance/scripts/train_bce_baseline.py": "a4b13a9c7937e34c34cff7b4386515742d9e5b10c53626fa2014bcf97a8ed09d",
+    "/home-mscluster/pgohil/cxr-research/3. Focal Loss/scripts/train_focal_loss.py": "03c821020b6e708e5592194a1db3e8309691c88e23d0c688c62a0add8185820c",
+    "/home-mscluster/pgohil/cxr-research/4. DB Loss/scripts/train_db_loss.py": "c409b8667a33c4057a5a8d320b6afaa959947d9f0b0c97988f2b1d77a63e283f",
+    "/home-mscluster/pgohil/cxr-research/5. Square-root Sampling/scripts/train_sqrt_sampling.py": "059520efa4088a58c1bb68a9e0b399f03d406a0ee20460449e10dbe3bd759c57",
+    "/home-mscluster/pgohil/cxr-research/7. Balanced MixUp/scripts/train_balanced_mixup.py": "377750e02901e3d02191dcb8fee4e9539226424f3ebea8b3d0b4c1057beb8e47",
+    "/home-mscluster/pgohil/cxr-research/6. Decoupled Training cRT/scripts/train_crt_stage2.py": "5c02e239e05f71486df69cc5043b341d72e969832b51b0737c53bcc2c6b6a009"
+  },
+  "data_sha256": {
+    "/home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/data/train_manifest.csv": "843162d82a9332273489058310b772188dd6d2279ae0e7520940535f9edce6fd",
+    "/home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/data/val_manifest.csv": "84c30e11e69524ee2f2e9a797cdd28ea4980b52181d828d3fe9715f1bb71e237",
+    "/home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/data/class_groups.csv": "27fd3ce80d88c6baa000dae67d38888409b95b13b49cfa4b954faf9231bba42b",
+    "/datasets/pgohil/Data_Entry_2017.csv": "88f75094e25ccc0c6f1f9cdfd4b2f94f9379a0ae07d5ff4dcf94242707b07462",
+    "/datasets/pgohil/test_list.txt": "38ca5ef7f756092946f57c1a59faca882ed589a1ab1f72590b45dc06c6d5e1cc"
+  },
+  "project_root": "/home-mscluster/pgohil/cxr-research",
+  "dataset_root": "/datasets/pgohil",
+  "bce_runs": "/home-mscluster/pgohil/cxr-research/sweeps/corrected_001/final/bce_baseline",
+  "scripts": {
+    "bce_baseline": "2. Degraded Performance/scripts/train_bce_baseline.py",
+    "focal_loss": "3. Focal Loss/scripts/train_focal_loss.py",
+    "db_loss": "4. DB Loss/scripts/train_db_loss.py",
+    "sqrt_sampling": "5. Square-root Sampling/scripts/train_sqrt_sampling.py",
+    "balanced_mixup": "7. Balanced MixUp/scripts/train_balanced_mixup.py",
+    "crt": "6. Decoupled Training cRT/scripts/train_crt_stage2.py"
+  },
+  "seeds": [
+    42,
+    123,
+    2024
+  ],
+  "selection_metric": "validation_mAP",
+  "sweep_seed": 42,
+  "grids": {
+    "bce_baseline": [
+      {
+        "lr": 3e-05,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 30,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4
+      },
+      {
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 30,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4
+      },
+      {
+        "lr": 0.0003,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 30,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4
+      }
+    ],
+    "focal_loss": [
+      {
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 30,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4,
+        "gamma": 1,
+        "disable_alpha": true
+      },
+      {
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 30,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4,
+        "gamma": 2,
+        "disable_alpha": true
+      },
+      {
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 30,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4,
+        "gamma": 5,
+        "disable_alpha": true
+      }
+    ],
+    "db_loss": [
+      {
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 30,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4,
+        "db_neg_scale": 1,
+        "db_map_beta": 0.2
+      },
+      {
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 30,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4,
+        "db_neg_scale": 1,
+        "db_map_beta": 0.3
+      },
+      {
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 30,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4,
+        "db_neg_scale": 2,
+        "db_map_beta": 0.2
+      },
+      {
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 30,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4,
+        "db_neg_scale": 2,
+        "db_map_beta": 0.3
+      },
+      {
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 30,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4,
+        "db_neg_scale": 5,
+        "db_map_beta": 0.2
+      },
+      {
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 30,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4,
+        "db_neg_scale": 5,
+        "db_map_beta": 0.3
+      }
+    ],
+    "sqrt_sampling": [
+      {
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 30,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4,
+        "sampling_exponent": 0.25
+      },
+      {
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 30,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4,
+        "sampling_exponent": 0.5
+      },
+      {
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 30,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4,
+        "sampling_exponent": 0.75
+      }
+    ],
+    "balanced_mixup": [
+      {
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 30,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4,
+        "mixup_alpha": 0.1
+      },
+      {
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 30,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4,
+        "mixup_alpha": 0.2
+      },
+      {
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 30,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4,
+        "mixup_alpha": 0.3
+      }
+    ],
+    "crt": [
+      {
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 10,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4
+      },
+      {
+        "lr": 0.0003,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 10,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4
+      },
+      {
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "batch_size": 16,
+        "epochs": 10,
+        "patience": 7,
+        "gradient_clip": 1.0,
+        "num_workers": 4
+      }
+    ]
+  }
+}

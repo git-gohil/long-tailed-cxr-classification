@@ -1,0 +1,19 @@
+{
+  "method": "sqrt_sampling",
+  "seed": 2024,
+  "settings": {
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "batch_size": 16,
+    "epochs": 30,
+    "patience": 7,
+    "gradient_clip": 1.0,
+    "num_workers": 4,
+    "sampling_exponent": 0.75
+  },
+  "output_sha256": {
+    "config.json": "e955b335452b077d0841a84a5c4dfe2b062cbe77f0ad2154dbff6d191fa79584",
+    "checkpoint_best.pt": "4c772f77484268306237fedab40c31b79357c908371d269bfeb2363aec719513",
+    "validation_metrics.json": "01569e254409d902b8c7bdbec756527f1706b9431db41ace3529955b6fc25fbb"
+  }
+}

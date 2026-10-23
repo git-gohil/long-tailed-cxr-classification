@@ -1,0 +1,101 @@
+Resolved configuration:
+{
+  "allow_overwrite": false,
+  "batch_size": 16,
+  "check_batches": 0,
+  "class_groups": "/home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/data/class_groups.csv",
+  "class_names": [
+    "Atelectasis",
+    "Cardiomegaly",
+    "Consolidation",
+    "Edema",
+    "Effusion",
+    "Emphysema",
+    "Fibrosis",
+    "Hernia",
+    "Infiltration",
+    "Mass",
+    "Nodule",
+    "Pleural_Thickening",
+    "Pneumonia",
+    "Pneumothorax"
+  ],
+  "dataset_root": "/datasets/pgohil",
+  "device": "cuda",
+  "disable_mixup": false,
+  "epochs": 30,
+  "experiment_folder": "7. Balanced MixUp",
+  "gradient_clip": 1.0,
+  "input_sha256": {
+    "/datasets/pgohil/Data_Entry_2017.csv": "88f75094e25ccc0c6f1f9cdfd4b2f94f9379a0ae07d5ff4dcf94242707b07462",
+    "/datasets/pgohil/test_list.txt": "38ca5ef7f756092946f57c1a59faca882ed589a1ab1f72590b45dc06c6d5e1cc",
+    "/home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/data/class_groups.csv": "27fd3ce80d88c6baa000dae67d38888409b95b13b49cfa4b954faf9231bba42b",
+    "/home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/data/train_manifest.csv": "843162d82a9332273489058310b772188dd6d2279ae0e7520940535f9edce6fd",
+    "/home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/data/val_manifest.csv": "84c30e11e69524ee2f2e9a797cdd28ea4980b52181d828d3fe9715f1bb71e237"
+  },
+  "lr": 0.0001,
+  "max_train_samples": null,
+  "max_val_samples": null,
+  "metadata_csv": "/datasets/pgohil/Data_Entry_2017.csv",
+  "method": "balanced_mixup",
+  "mixup_alpha": 0.2,
+  "mode": "train",
+  "no_amp": false,
+  "num_workers": 4,
+  "output_dir": "/home-mscluster/pgohil/cxr-research/sweeps/corrected_001/candidates/balanced_mixup/candidate_01/seed_42",
+  "patience": 7,
+  "preprocessing_description": {
+    "image_source": "Original NIH image paths from preprocessing manifests; images are not copied or modified.",
+    "training": [
+      "open image from manifest image_path",
+      "convert to grayscale, then RGB/three channels",
+      "resize to 256 x 256",
+      "random crop 224 x 224",
+      "random horizontal flip p=0.5",
+      "random rotation in [-10, 10] degrees",
+      "brightness and contrast jitter 0.2",
+      "convert to tensor",
+      "ImageNet normalization"
+    ],
+    "validation": [
+      "open image from manifest image_path",
+      "convert to grayscale, then RGB/three channels",
+      "resize to 256 x 256",
+      "center crop 224 x 224",
+      "convert to tensor",
+      "ImageNet normalization"
+    ]
+  },
+  "project_root": "/home-mscluster/pgohil/cxr-research",
+  "resume": false,
+  "seed": 42,
+  "smoke_test": false,
+  "test_list": "/datasets/pgohil/test_list.txt",
+  "threshold": 0.5,
+  "train_manifest": "/home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/data/train_manifest.csv",
+  "training_protocol": "corrected_v2",
+  "val_manifest": "/home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/data/val_manifest.csv",
+  "weight_decay": 0.0001
+}
+Epoch 001: train_loss=0.1836 val_loss=0.1390 val_mAP=0.2048 val_macro_f1=0.1071
+Epoch 002: train_loss=0.1730 val_loss=0.1379 val_mAP=0.2219 val_macro_f1=0.1058
+Epoch 003: train_loss=0.1684 val_loss=0.1359 val_mAP=0.2310 val_macro_f1=0.1501
+Epoch 004: train_loss=0.1663 val_loss=0.1328 val_mAP=0.2257 val_macro_f1=0.1168
+Epoch 005: train_loss=0.1634 val_loss=0.1326 val_mAP=0.2277 val_macro_f1=0.1258
+Epoch 006: train_loss=0.1625 val_loss=0.1344 val_mAP=0.2308 val_macro_f1=0.1441
+Epoch 007: train_loss=0.1563 val_loss=0.1337 val_mAP=0.2393 val_macro_f1=0.1724
+Epoch 008: train_loss=0.1531 val_loss=0.1329 val_mAP=0.2417 val_macro_f1=0.1507
+Epoch 009: train_loss=0.1500 val_loss=0.1331 val_mAP=0.2293 val_macro_f1=0.1449
+Epoch 010: train_loss=0.1473 val_loss=0.1365 val_mAP=0.2209 val_macro_f1=0.1816
+Epoch 011: train_loss=0.1441 val_loss=0.1402 val_mAP=0.2129 val_macro_f1=0.1460
+Epoch 012: train_loss=0.1383 val_loss=0.1400 val_mAP=0.2075 val_macro_f1=0.1774
+Epoch 013: train_loss=0.1336 val_loss=0.1436 val_mAP=0.2088 val_macro_f1=0.2013
+Epoch 014: train_loss=0.1313 val_loss=0.1462 val_mAP=0.1985 val_macro_f1=0.1804
+Epoch 015: train_loss=0.1263 val_loss=0.1454 val_mAP=0.1928 val_macro_f1=0.1921
+Early stopping after 7 epoch(s) without validation mAP improvement.
+Final concise summary:
+Best epoch: 8
+Validation mAP: 0.24168683210126787
+Macro-F1 @ 0.5: 0.15072930626209086
+Head/medium/tail mAP: 0.3976544037064594 / 0.20437353145213394 / 0.17564532761458293
+Head/medium/tail macro-F1: 0.28220776851359924 / 0.12019653336781021 / 0.09090909090909091

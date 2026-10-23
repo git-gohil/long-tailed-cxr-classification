@@ -1,0 +1,27 @@
+{
+  "identity": {
+    "checkpoint_sha256": "e787652bf6adc2ddd3c617d864b9ddb440ed7a87cafe582d584d6ba927db1125",
+    "input_sha256": {
+      "/datasets/pgohil/Data_Entry_2017.csv": "88f75094e25ccc0c6f1f9cdfd4b2f94f9379a0ae07d5ff4dcf94242707b07462",
+      "/datasets/pgohil/test_list.txt": "38ca5ef7f756092946f57c1a59faca882ed589a1ab1f72590b45dc06c6d5e1cc",
+      "/home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/data/class_groups.csv": "27fd3ce80d88c6baa000dae67d38888409b95b13b49cfa4b954faf9231bba42b",
+      "/home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/data/train_manifest.csv": "843162d82a9332273489058310b772188dd6d2279ae0e7520940535f9edce6fd",
+      "/home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/data/val_manifest.csv": "84c30e11e69524ee2f2e9a797cdd28ea4980b52181d828d3fe9715f1bb71e237"
+    },
+    "max_test_samples": null,
+    "method": "balanced_mixup",
+    "seed": 2024,
+    "split": "test",
+    "training_protocol": "corrected_v2",
+    "validation_thresholds_sha256": "81c0efeaf50f79836f9622b8778d939491c1bae481d317b46eb9866aa6fc6db3"
+  },
+  "output_sha256": {
+    "image_ids.npy": "623bbb3b23e3529e3d90907398c2dff8e46a972b5a525924d4a263d8aee43c87",
+    "labels.npy": "a3681b71b59525431b7f9869088a30c40618542d9e63bcca536efa222c380bdb",
+    "logits.npy": "2a28a158575fab3c4c4e96e507224e2011e0f9d5024de6bc249fbd4016bf68a8",
+    "metrics.json": "1ec7fdcfc0c840076754f7ac91c238b956786e136a5e1e744880193e4d68ace8",
+    "metrics_tuned_threshold.json": "0ea123db862bbe1931825f0c732c719c17935ed0466557cee9bee141eb4847b6",
+    "patient_ids.npy": "29e8fd12c562b00e04f4f727d19e808bef78e7f87bafa7be9af731eadfc2ada5",
+    "predictions.npy": "562896ee86fff9c8ecf7a6c487754e0543baaeaa53c2030cd73a809f54289117"
+  }
+}

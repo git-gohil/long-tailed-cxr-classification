@@ -1,0 +1,20 @@
+{
+  "method": "focal_loss",
+  "seed": 123,
+  "settings": {
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "batch_size": 16,
+    "epochs": 30,
+    "patience": 7,
+    "gradient_clip": 1.0,
+    "num_workers": 4,
+    "gamma": 2,
+    "disable_alpha": true
+  },
+  "output_sha256": {
+    "config.json": "bf18e787feea54e6859ca36f25e331b3406bbcf71c3b5c21e52e6a82899d83a8",
+    "checkpoint_best.pt": "d57320bc79889859f9da41927289cd373ed90325fb6905e17e2bb89ada8d1f74",
+    "validation_metrics.json": "cb03ecb02fc6faa4311908e6681ab3b66e1d0c0d47cf3f23deac76e7ec933125"
+  }
+}

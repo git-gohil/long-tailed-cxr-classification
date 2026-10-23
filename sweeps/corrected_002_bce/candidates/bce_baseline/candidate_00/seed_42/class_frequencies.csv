@@ -1,0 +1,15 @@
+pathology,train_positive_count,validation_positive_count,group
+Atelectasis,7267,1013,head
+Cardiomegaly,1499,208,medium
+Consolidation,2484,368,medium
+Edema,1184,194,medium
+Effusion,7483,1176,head
+Emphysema,1277,146,medium
+Fibrosis,1091,160,medium
+Hernia,124,17,tail
+Infiltration,12000,1782,head
+Mass,3559,475,medium
+Nodule,4094,614,medium
+Pleural_Thickening,1947,295,medium
+Pneumonia,757,119,tail
+Pneumothorax,2330,307,medium

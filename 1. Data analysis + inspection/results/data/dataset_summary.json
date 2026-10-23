@@ -1,0 +1,191 @@
+{
+  "duplicate_filenames_in_train_manifest": 0,
+  "duplicate_full_paths_in_train_manifest": 0,
+  "exact_duplicate_image_hash_rows": 0,
+  "file_size_bytes_summary": {
+    "25%": 376270.0,
+    "50%": 404381.0,
+    "75%": 432907.0,
+    "count": 75505.0,
+    "max": 808622.0,
+    "mean": 402865.46090987354,
+    "min": 95208.0,
+    "std": 42112.48178401526
+  },
+  "group_positive_label_percentages": {
+    "head": 56.79887888568032,
+    "medium": 41.330473925598774,
+    "tail": 1.8706471887209104
+  },
+  "head_classes": [
+    "Atelectasis",
+    "Effusion",
+    "Infiltration"
+  ],
+  "image_file_extensions": {
+    ".png": 75505
+  },
+  "image_mode_distribution": {
+    "L": 75109,
+    "RGBA": 396
+  },
+  "images_per_training_patient_summary": {
+    "25%": 1.0,
+    "50%": 1.0,
+    "75%": 3.0,
+    "count": 24507.0,
+    "max": 109.0,
+    "mean": 3.0809564614191864,
+    "min": 1.0,
+    "std": 4.965232021651302
+  },
+  "imbalance_ratio": 96.7741935483871,
+  "label_cardinality": 0.623746771736971,
+  "label_density": 0.04455334083835507,
+  "max_class_frequency": 12000,
+  "medium_classes": [
+    "Cardiomegaly",
+    "Consolidation",
+    "Edema",
+    "Emphysema",
+    "Fibrosis",
+    "Mass",
+    "Nodule",
+    "Pleural_Thickening",
+    "Pneumothorax"
+  ],
+  "minimum_nonzero_class_frequency": 124,
+  "missing_images": 0,
+  "negative_training_counts": {
+    "Atelectasis": 68238,
+    "Cardiomegaly": 74006,
+    "Consolidation": 73021,
+    "Edema": 74321,
+    "Effusion": 68022,
+    "Emphysema": 74228,
+    "Fibrosis": 74414,
+    "Hernia": 75381,
+    "Infiltration": 63505,
+    "Mass": 71946,
+    "Nodule": 71411,
+    "Pleural_Thickening": 73558,
+    "Pneumonia": 74748,
+    "Pneumothorax": 73175
+  },
+  "no_finding_count": 44047,
+  "no_finding_percent": 58.33653400437056,
+  "no_finding_sampling_weight": 1.0,
+  "no_finding_sampling_weight_note": "No Finding images have no disease class; weight 1.0 keeps them neutral while rare pathology images receive higher sqrt-inverse weights.",
+  "original_height_summary": {
+    "25%": 1024.0,
+    "50%": 1024.0,
+    "75%": 1024.0,
+    "count": 75505.0,
+    "max": 1024.0,
+    "mean": 1024.0,
+    "min": 1024.0,
+    "std": 0.0
+  },
+  "original_width_summary": {
+    "25%": 1024.0,
+    "50%": 1024.0,
+    "75%": 1024.0,
+    "count": 75505.0,
+    "max": 1024.0,
+    "mean": 1024.0,
+    "min": 1024.0,
+    "std": 0.0
+  },
+  "patient_age_summary": {
+    "25%": 35.0,
+    "50%": 49.0,
+    "75%": 59.0,
+    "count": 75494.0,
+    "max": 95.0,
+    "mean": 46.81773385964448,
+    "min": 1.0,
+    "std": 16.651287910585843
+  },
+  "patient_gender_counts": {
+    "F": 33320,
+    "M": 42185
+  },
+  "positive_pathology_labels_per_image_counts": {
+    "more_than_three": 763,
+    "one": 20101,
+    "three": 2534,
+    "two": 8060,
+    "zero": 44047
+  },
+  "positive_training_counts": {
+    "Atelectasis": 7267,
+    "Cardiomegaly": 1499,
+    "Consolidation": 2484,
+    "Edema": 1184,
+    "Effusion": 7483,
+    "Emphysema": 1277,
+    "Fibrosis": 1091,
+    "Hernia": 124,
+    "Infiltration": 12000,
+    "Mass": 3559,
+    "Nodule": 4094,
+    "Pleural_Thickening": 1947,
+    "Pneumonia": 757,
+    "Pneumothorax": 2330
+  },
+  "positive_validation_counts": {
+    "Atelectasis": 1013,
+    "Cardiomegaly": 208,
+    "Consolidation": 368,
+    "Edema": 194,
+    "Effusion": 1176,
+    "Emphysema": 146,
+    "Fibrosis": 160,
+    "Hernia": 17,
+    "Infiltration": 1782,
+    "Mass": 475,
+    "Nodule": 614,
+    "Pleural_Thickening": 295,
+    "Pneumonia": 119,
+    "Pneumothorax": 307
+  },
+  "preprocessing_verification": {
+    "checked_images": 8,
+    "tensor_max": 2.5354249477386475,
+    "tensor_mean": 0.8745112475007772,
+    "tensor_min": -2.1179039478302,
+    "tensor_std": 0.8809520825743675
+  },
+  "prevalence_percent": {
+    "Atelectasis": 9.624528176941924,
+    "Cardiomegaly": 1.9852989868220645,
+    "Consolidation": 3.289848354413615,
+    "Edema": 1.568108072313092,
+    "Effusion": 9.910601946890935,
+    "Emphysema": 1.6912787232633602,
+    "Fibrosis": 1.4449374213628237,
+    "Hernia": 0.1642275346003576,
+    "Infiltration": 15.892987219389445,
+    "Mass": 4.713595126150586,
+    "Nodule": 5.422157473015032,
+    "Pleural_Thickening": 2.5786371763459375,
+    "Pneumonia": 1.0025826104231508,
+    "Pneumothorax": 3.0858883517647837
+  },
+  "split_method": "patient-level random fallback with 200 prevalence-matching shuffles; less exact than iterative stratification",
+  "tail_classes": [
+    "Hernia",
+    "Pneumonia"
+  ],
+  "train_images": 75505,
+  "unique_label_combinations": 590,
+  "unique_training_patients": 24507,
+  "unique_validation_patients": 3501,
+  "unreadable_or_corrupted_training_images": 0,
+  "validation_images": 11019,
+  "view_position_counts": {
+    "AP": 26308,
+    "PA": 49197
+  },
+  "zero_positive_pathology_images": 44047
+}

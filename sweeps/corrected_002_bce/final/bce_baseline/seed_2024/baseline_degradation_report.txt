@@ -1,0 +1,25 @@
+Baseline ResNet-152 BCE Degradation Report
+============================================
+Selected checkpoint epoch: 5
+Overall mAP: 0.24134124324521386
+Overall macro-F1 at threshold 0.5: 0.1540688658188853
+Head mAP: 0.3996058532236757
+Medium mAP: 0.21929236716658876
+Tail mAP: 0.10316427063133427
+Head macro-F1: 0.265138502942727
+Medium macro-F1: 0.1235054014040237
+Tail macro-F1: 0.125
+Head-tail mAP gap: 0.29644158259234143
+Head-tail macro-F1 gap: 0.140138502942727
+Tail/head mAP ratio: 0.2581650638975726
+Spearman log frequency vs AP: 0.6967032967032967
+Spearman log frequency vs F1: 0.3421666902363703
+
+Lowest-performing pathologies by AP:
+- Pneumonia: AP=0.03047344002853062, F1=0.0, group=tail, train positives=757
+- Fibrosis: AP=0.11373017193497473, F1=0.0, group=medium, train positives=1091
+- Consolidation: AP=0.13821699816267494, F1=0.0, group=medium, train positives=2484
+- Pleural_Thickening: AP=0.14574401318475277, F1=0.07926829268292683, group=medium, train positives=1947
+- Hernia: AP=0.17585510123413792, F1=0.25, group=tail, train positives=124
+
+Evidence of degraded tail-class performance: Yes, tail-class performance is worse than head-class performance by the saved mAP/F1 gaps.

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "test_filenames_in_official_list": 25596,
+  "train_images": 75505,
+  "train_test_image_overlap": [],
+  "train_test_patient_overlap": [],
+  "train_validation_image_overlap": [],
+  "train_validation_patient_overlap": [],
+  "validation_images": 11019,
+  "validation_test_image_overlap": [],
+  "validation_test_patient_overlap": []
+}

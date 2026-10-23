@@ -1,0 +1,25 @@
+Using device: cuda
+Epoch 001: train_loss=0.1482 val_loss=0.1413 val_mAP=0.1705 val_macro_f1=0.0836
+Epoch 002: train_loss=0.1396 val_loss=0.1388 val_mAP=0.1851 val_macro_f1=0.0725
+Epoch 003: train_loss=0.1363 val_loss=0.1364 val_mAP=0.1976 val_macro_f1=0.1015
+Epoch 004: train_loss=0.1341 val_loss=0.1339 val_mAP=0.2052 val_macro_f1=0.0967
+Epoch 005: train_loss=0.1324 val_loss=0.1334 val_mAP=0.2126 val_macro_f1=0.1053
+Epoch 006: train_loss=0.1310 val_loss=0.1323 val_mAP=0.2250 val_macro_f1=0.1277
+Epoch 007: train_loss=0.1298 val_loss=0.1316 val_mAP=0.2252 val_macro_f1=0.1341
+Epoch 008: train_loss=0.1285 val_loss=0.1313 val_mAP=0.2300 val_macro_f1=0.1344
+Epoch 009: train_loss=0.1273 val_loss=0.1326 val_mAP=0.2281 val_macro_f1=0.1343
+Epoch 010: train_loss=0.1264 val_loss=0.1326 val_mAP=0.2256 val_macro_f1=0.1460
+Epoch 011: train_loss=0.1253 val_loss=0.1342 val_mAP=0.2309 val_macro_f1=0.1743
+Epoch 012: train_loss=0.1242 val_loss=0.1341 val_mAP=0.2242 val_macro_f1=0.1204
+Epoch 013: train_loss=0.1231 val_loss=0.1320 val_mAP=0.2304 val_macro_f1=0.1559
+Epoch 014: train_loss=0.1220 val_loss=0.1323 val_mAP=0.2255 val_macro_f1=0.1309
+Epoch 015: train_loss=0.1174 val_loss=0.1314 val_mAP=0.2408 val_macro_f1=0.1978
+Epoch 016: train_loss=0.1151 val_loss=0.1351 val_mAP=0.2290 val_macro_f1=0.1884
+Epoch 017: train_loss=0.1133 val_loss=0.1341 val_mAP=0.2348 val_macro_f1=0.1880
+Epoch 018: train_loss=0.1114 val_loss=0.1363 val_mAP=0.2302 val_macro_f1=0.1774
+Epoch 019: train_loss=0.1072 val_loss=0.1389 val_mAP=0.2290 val_macro_f1=0.1998
+Epoch 020: train_loss=0.1048 val_loss=0.1396 val_mAP=0.2256 val_macro_f1=0.2067
+Epoch 021: train_loss=0.1029 val_loss=0.1428 val_mAP=0.2229 val_macro_f1=0.2118
+Epoch 022: train_loss=0.0997 val_loss=0.1442 val_mAP=0.2212 val_macro_f1=0.2209
+Early stopping after 7 epoch(s) without validation mAP improvement.
+Best validation mAP: 0.2407679668860962 at epoch 15.

@@ -1,0 +1,10 @@
+{
+  "dry_run": false,
+  "jobs": {
+    "crt": {
+      "sweep": "72447",
+      "select": "72448",
+      "final": "72449"
+    }
+  }
+}

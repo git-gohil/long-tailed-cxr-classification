@@ -1,0 +1,19 @@
+{
+  "method": "balanced_mixup",
+  "seed": 42,
+  "settings": {
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "batch_size": 16,
+    "epochs": 30,
+    "patience": 7,
+    "gradient_clip": 1.0,
+    "num_workers": 4,
+    "mixup_alpha": 0.2
+  },
+  "output_sha256": {
+    "config.json": "2a7a720116438f91c92b8a1d6ddad83807cc256b7422494c457a3bca4bbe5460",
+    "checkpoint_best.pt": "3fee8ca1a808d84a5b7db60ede67db59a89ff5dde01435fcbfa58fa80189b5c5",
+    "validation_metrics.json": "3b1b7a950f5d0b7b2041829679213f91c3fe5c9f389137c8892cf7f5d025f6e3"
+  }
+}

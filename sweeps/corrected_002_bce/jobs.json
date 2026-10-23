@@ -1,0 +1,10 @@
+{
+  "dry_run": false,
+  "jobs": {
+    "bce_baseline": {
+      "sweep": "72063",
+      "select": "72064",
+      "final": "72065"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+Job started on: mscluster185.ms.wits.ac.za
+Start date: Mon Oct 19 03:32:11 PM UTC 2026
+Project root: /home-mscluster/pgohil/cxr-research
+Experiment dir: /home-mscluster/pgohil/cxr-research/1. Data analysis + inspection
+Dataset root: /datasets/pgohil
+Container: /usr/local/containers/anaconda/anaconda-2025-12-2.sif
+Python environment: /home-mscluster/pgohil/.conda/envs/cxr-longtail/bin/python
+Python 3.11.15
+
+Training-only NIH preprocessing/EDA summary
+==============================================
+Split method: patient-level random fallback with 200 prevalence-matching shuffles; less exact than iterative stratification
+Train images: 75505
+Validation images: 11019
+Unique training patients: 24507
+Unique validation patients: 3501
+Most frequent pathology: Infiltration (12000)
+Least frequent non-zero pathology: Hernia (124)
+Imbalance ratio: 96.7741935483871
+Head classes: Atelectasis, Effusion, Infiltration
+Medium classes: Cardiomegaly, Consolidation, Edema, Emphysema, Fibrosis, Mass, Nodule, Pleural_Thickening, Pneumothorax
+Tail classes: Hernia, Pneumonia
+No Finding training images: 44047 (58.34%)
+Label cardinality: 0.6237
+Preprocessing checked images: 8
+Reports: /home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/data
+Figures: /home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/figures
+Finish date: Mon Oct 19 03:41:45 PM UTC 2026

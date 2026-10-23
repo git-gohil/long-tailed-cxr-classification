@@ -1,0 +1,15 @@
+Using device: cuda
+Epoch 001: train_loss=0.1503 val_loss=0.1381 val_mAP=0.1874 val_macro_f1=0.0893
+Epoch 002: train_loss=0.1349 val_loss=0.1341 val_mAP=0.2031 val_macro_f1=0.0887
+Epoch 003: train_loss=0.1300 val_loss=0.1321 val_mAP=0.2207 val_macro_f1=0.1169
+Epoch 004: train_loss=0.1259 val_loss=0.1313 val_mAP=0.2265 val_macro_f1=0.1378
+Epoch 005: train_loss=0.1223 val_loss=0.1319 val_mAP=0.2330 val_macro_f1=0.1449
+Epoch 006: train_loss=0.1182 val_loss=0.1333 val_mAP=0.2291 val_macro_f1=0.1552
+Epoch 007: train_loss=0.1140 val_loss=0.1349 val_mAP=0.2266 val_macro_f1=0.1803
+Epoch 008: train_loss=0.1092 val_loss=0.1396 val_mAP=0.2186 val_macro_f1=0.1666
+Epoch 009: train_loss=0.0990 val_loss=0.1474 val_mAP=0.2062 val_macro_f1=0.1890
+Epoch 010: train_loss=0.0928 val_loss=0.1567 val_mAP=0.1919 val_macro_f1=0.1799
+Epoch 011: train_loss=0.0877 val_loss=0.1633 val_mAP=0.1862 val_macro_f1=0.1898
+Epoch 012: train_loss=0.0794 val_loss=0.1757 val_mAP=0.1821 val_macro_f1=0.1882
+Early stopping after 7 epoch(s) without validation mAP improvement.
+Best validation mAP: 0.23297691167770354 at epoch 5.

@@ -1,0 +1,7 @@
+{
+  "head_tail_f1_gap": 0.140138502942727,
+  "head_tail_map_gap": 0.29644158259234143,
+  "spearman_log_train_frequency_vs_ap": 0.6967032967032967,
+  "spearman_log_train_frequency_vs_f1": 0.3421666902363703,
+  "tail_head_map_ratio": 0.2581650638975726
+}

@@ -1,0 +1,18 @@
+{
+  "method": "crt",
+  "seed": 42,
+  "settings": {
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 16,
+    "epochs": 10,
+    "patience": 7,
+    "gradient_clip": 1.0,
+    "num_workers": 4
+  },
+  "output_sha256": {
+    "config.json": "6d2a0f47fb6e7879b2f24b53631d4ae55c16564777dc9411cbb969109ecd4185",
+    "checkpoint_best.pt": "2daa7a23aab0426495d47249295914aa0d75b75c367ae0ce81a6eaad534b4875",
+    "validation_metrics.json": "46af34bf4a6f32b2cf463d4649d9f8ac6e4b1937df22f319e6aaa25497cc9c87"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "analysis_name": "patient_cluster_bootstrap",
+  "bootstrap_resamples": 1000,
+  "bootstrap_seed": 42,
+  "bootstrap_unit": "unique patient with all of that patient's images retained",
+  "interval_estimand": "patient-sampling uncertainty conditional on the configured trained seed models",
+  "methods": [
+    "bce_baseline",
+    "focal_loss",
+    "db_loss",
+    "sqrt_sampling",
+    "crt",
+    "balanced_mixup"
+  ],
+  "old_results_directory_touched": false,
+  "output_dir": "/home-mscluster/pgohil/cxr-research/sweeps/corrected_001/analysis_recovery_001/patient_bootstrap",
+  "outputs": [
+    "patient_bootstrap_summary.csv",
+    "patient_bootstrap_group_summary.csv",
+    "patient_bootstrap_seed_metrics.csv",
+    "patient_bootstrap_vs_bce.csv",
+    "patient_bootstrap_distributions.npz",
+    "patient_bootstrap_map_ci.png",
+    "PATIENT_BOOTSTRAP_README.txt"
+  ],
+  "point_estimate": "mean test mAP across training seeds",
+  "runs_dir": "/home-mscluster/pgohil/cxr-research/sweeps/corrected_001/final",
+  "seeds": [
+    42,
+    123,
+    2024
+  ],
+  "shared_draws_across_methods": true,
+  "test_images": 25596,
+  "unique_test_patients": 2797
+}

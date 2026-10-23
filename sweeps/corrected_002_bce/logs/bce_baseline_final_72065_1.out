@@ -1,0 +1,19 @@
+Using device: cuda
+Epoch 001: train_loss=0.1456 val_loss=0.1393 val_mAP=0.1976 val_macro_f1=0.0910
+Epoch 002: train_loss=0.1348 val_loss=0.1342 val_mAP=0.2122 val_macro_f1=0.1276
+Epoch 003: train_loss=0.1311 val_loss=0.1317 val_mAP=0.2237 val_macro_f1=0.1138
+Epoch 004: train_loss=0.1285 val_loss=0.1315 val_mAP=0.2338 val_macro_f1=0.1352
+Epoch 005: train_loss=0.1259 val_loss=0.1334 val_mAP=0.2340 val_macro_f1=0.1206
+Epoch 006: train_loss=0.1235 val_loss=0.1298 val_mAP=0.2389 val_macro_f1=0.1315
+Epoch 007: train_loss=0.1211 val_loss=0.1316 val_mAP=0.2476 val_macro_f1=0.1768
+Epoch 008: train_loss=0.1187 val_loss=0.1341 val_mAP=0.2346 val_macro_f1=0.1835
+Epoch 009: train_loss=0.1159 val_loss=0.1336 val_mAP=0.2347 val_macro_f1=0.1719
+Epoch 010: train_loss=0.1127 val_loss=0.1381 val_mAP=0.2336 val_macro_f1=0.2005
+Epoch 011: train_loss=0.1029 val_loss=0.1417 val_mAP=0.2259 val_macro_f1=0.1907
+Epoch 012: train_loss=0.0963 val_loss=0.1459 val_mAP=0.2134 val_macro_f1=0.1956
+Epoch 013: train_loss=0.0906 val_loss=0.1482 val_mAP=0.2070 val_macro_f1=0.2048
+Epoch 014: train_loss=0.0800 val_loss=0.1635 val_mAP=0.1981 val_macro_f1=0.2140
+Early stopping after 7 epoch(s) without validation mAP improvement.
+Best validation mAP: 0.24758910772823403 at epoch 7.
+Saved val evaluation outputs to /home-mscluster/pgohil/cxr-research/sweeps/corrected_002_bce/final/bce_baseline/seed_123/eval_val
+Saved test evaluation outputs to /home-mscluster/pgohil/cxr-research/sweeps/corrected_002_bce/final/bce_baseline/seed_123/eval_test

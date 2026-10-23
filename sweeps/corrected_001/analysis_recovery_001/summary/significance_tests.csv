@@ -1,0 +1,9 @@
+method_a,method_b,p_value
+bce_baseline,balanced_mixup,1.0
+bce_baseline,focal_loss,0.25
+balanced_mixup,focal_loss,0.75
+focal_loss,bce_baseline,0.25
+db_loss,bce_baseline,0.25
+sqrt_sampling,bce_baseline,0.25
+crt,bce_baseline,0.25
+balanced_mixup,bce_baseline,1.0

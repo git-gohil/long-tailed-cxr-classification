@@ -1,0 +1,17 @@
+Using device: cuda
+Epoch 001: train_loss=0.1451 val_loss=0.1353 val_mAP=0.1986 val_macro_f1=0.1062
+Epoch 002: train_loss=0.1346 val_loss=0.1335 val_mAP=0.2152 val_macro_f1=0.1095
+Epoch 003: train_loss=0.1310 val_loss=0.1320 val_mAP=0.2277 val_macro_f1=0.1298
+Epoch 004: train_loss=0.1281 val_loss=0.1315 val_mAP=0.2265 val_macro_f1=0.1098
+Epoch 005: train_loss=0.1257 val_loss=0.1305 val_mAP=0.2413 val_macro_f1=0.1541
+Epoch 006: train_loss=0.1229 val_loss=0.1322 val_mAP=0.2329 val_macro_f1=0.1782
+Epoch 007: train_loss=0.1206 val_loss=0.1338 val_mAP=0.2342 val_macro_f1=0.1789
+Epoch 008: train_loss=0.1179 val_loss=0.1340 val_mAP=0.2412 val_macro_f1=0.1681
+Epoch 009: train_loss=0.1096 val_loss=0.1373 val_mAP=0.2347 val_macro_f1=0.1962
+Epoch 010: train_loss=0.1042 val_loss=0.1407 val_mAP=0.2233 val_macro_f1=0.2069
+Epoch 011: train_loss=0.0992 val_loss=0.1435 val_mAP=0.2154 val_macro_f1=0.2177
+Epoch 012: train_loss=0.0895 val_loss=0.1539 val_mAP=0.2089 val_macro_f1=0.2080
+Early stopping after 7 epoch(s) without validation mAP improvement.
+Best validation mAP: 0.24134124324521386 at epoch 5.
+Saved val evaluation outputs to /home-mscluster/pgohil/cxr-research/sweeps/corrected_002_bce/final/bce_baseline/seed_2024/eval_val
+Saved test evaluation outputs to /home-mscluster/pgohil/cxr-research/sweeps/corrected_002_bce/final/bce_baseline/seed_2024/eval_test

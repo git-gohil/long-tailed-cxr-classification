@@ -1,0 +1,99 @@
+Resolved configuration:
+{
+  "allow_overwrite": false,
+  "batch_size": 16,
+  "check_batches": 0,
+  "class_groups": "/home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/data/class_groups.csv",
+  "class_names": [
+    "Atelectasis",
+    "Cardiomegaly",
+    "Consolidation",
+    "Edema",
+    "Effusion",
+    "Emphysema",
+    "Fibrosis",
+    "Hernia",
+    "Infiltration",
+    "Mass",
+    "Nodule",
+    "Pleural_Thickening",
+    "Pneumonia",
+    "Pneumothorax"
+  ],
+  "dataset_root": "/datasets/pgohil",
+  "device": "cuda",
+  "epochs": 30,
+  "experiment_folder": "5. Square-root Sampling",
+  "gradient_clip": 1.0,
+  "input_sha256": {
+    "/datasets/pgohil/Data_Entry_2017.csv": "88f75094e25ccc0c6f1f9cdfd4b2f94f9379a0ae07d5ff4dcf94242707b07462",
+    "/datasets/pgohil/test_list.txt": "38ca5ef7f756092946f57c1a59faca882ed589a1ab1f72590b45dc06c6d5e1cc",
+    "/home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/data/class_groups.csv": "27fd3ce80d88c6baa000dae67d38888409b95b13b49cfa4b954faf9231bba42b",
+    "/home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/data/train_manifest.csv": "843162d82a9332273489058310b772188dd6d2279ae0e7520940535f9edce6fd",
+    "/home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/data/val_manifest.csv": "84c30e11e69524ee2f2e9a797cdd28ea4980b52181d828d3fe9715f1bb71e237"
+  },
+  "lr": 0.0001,
+  "max_train_samples": null,
+  "max_val_samples": null,
+  "metadata_csv": "/datasets/pgohil/Data_Entry_2017.csv",
+  "method": "sqrt_sampling",
+  "mode": "train",
+  "no_amp": false,
+  "no_positive_weight": null,
+  "num_workers": 4,
+  "output_dir": "/home-mscluster/pgohil/cxr-research/sweeps/corrected_001/final/sqrt_sampling/seed_42",
+  "patience": 7,
+  "preprocessing_description": {
+    "image_source": "Original NIH image paths from preprocessing manifests; images are not copied or modified.",
+    "training": [
+      "open image from manifest image_path",
+      "convert to grayscale, then RGB/three channels",
+      "resize to 256 x 256",
+      "random crop 224 x 224",
+      "random horizontal flip p=0.5",
+      "random rotation in [-10, 10] degrees",
+      "brightness and contrast jitter 0.2",
+      "convert to tensor",
+      "ImageNet normalization"
+    ],
+    "validation": [
+      "open image from manifest image_path",
+      "convert to grayscale, then RGB/three channels",
+      "resize to 256 x 256",
+      "center crop 224 x 224",
+      "convert to tensor",
+      "ImageNet normalization"
+    ]
+  },
+  "project_root": "/home-mscluster/pgohil/cxr-research",
+  "resume": false,
+  "sampling_exponent": 0.75,
+  "seed": 42,
+  "smoke_test": false,
+  "test_list": "/datasets/pgohil/test_list.txt",
+  "threshold": 0.5,
+  "train_manifest": "/home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/data/train_manifest.csv",
+  "training_protocol": "corrected_v2",
+  "val_manifest": "/home-mscluster/pgohil/cxr-research/1. Data analysis + inspection/results/data/val_manifest.csv",
+  "weight_decay": 0.0001
+}
+Sampling weight summary saved.
+Epoch 001: train_loss=0.1448 val_loss=0.1440 val_mAP=0.2112 val_macro_f1=0.1273
+Epoch 002: train_loss=0.1299 val_loss=0.1419 val_mAP=0.2172 val_macro_f1=0.1466
+Epoch 003: train_loss=0.1246 val_loss=0.1385 val_mAP=0.2332 val_macro_f1=0.1733
+Epoch 004: train_loss=0.1180 val_loss=0.1418 val_mAP=0.2204 val_macro_f1=0.1811
+Epoch 005: train_loss=0.1118 val_loss=0.1444 val_mAP=0.2167 val_macro_f1=0.1884
+Epoch 006: train_loss=0.1053 val_loss=0.1455 val_mAP=0.2080 val_macro_f1=0.2014
+Epoch 007: train_loss=0.0929 val_loss=0.1560 val_mAP=0.2051 val_macro_f1=0.2037
+Epoch 008: train_loss=0.0836 val_loss=0.1579 val_mAP=0.2060 val_macro_f1=0.2093
+Epoch 009: train_loss=0.0764 val_loss=0.1696 val_mAP=0.1948 val_macro_f1=0.1997
+Epoch 010: train_loss=0.0660 val_loss=0.1757 val_mAP=0.1953 val_macro_f1=0.2167
+Early stopping after 7 epoch(s) without validation mAP improvement.
+Final concise summary:
+Best epoch: 3
+Validation mAP: 0.2332194480744562
+Macro-F1 @ 0.5: 0.17330216050866218
+Head/medium/tail mAP: 0.3868227419454365 / 0.19291985422156113 / 0.18416267960601315
+Head/medium/tail macro-F1: 0.2519252984269869 / 0.1395903264109883 / 0.20707070707070707
+Saved val evaluation outputs to /home-mscluster/pgohil/cxr-research/sweeps/corrected_001/final/sqrt_sampling/seed_42/eval_val
+Saved test evaluation outputs to /home-mscluster/pgohil/cxr-research/sweeps/corrected_001/final/sqrt_sampling/seed_42/eval_test

@@ -1,0 +1,22 @@
+{
+  "lambda_max": 0.9998982812674211,
+  "lambda_mean": 0.16723437111616596,
+  "lambda_min": 1.598715893149604e-26,
+  "num_mixed_batches": 70800,
+  "partner_class_counts": {
+    "Atelectasis": 199377.0,
+    "Cardiomegaly": 86555.0,
+    "Consolidation": 103175.0,
+    "Edema": 88946.0,
+    "Effusion": 247133.0,
+    "Emphysema": 80098.0,
+    "Fibrosis": 80650.0,
+    "Hernia": 75330.0,
+    "Infiltration": 293982.0,
+    "Mass": 129929.0,
+    "Nodule": 130335.0,
+    "Pleural_Thickening": 95606.0,
+    "Pneumonia": 75185.0,
+    "Pneumothorax": 101528.0
+  }
+}

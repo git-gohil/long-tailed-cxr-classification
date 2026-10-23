@@ -1,0 +1,22 @@
+{
+  "head": [
+    "Atelectasis",
+    "Effusion",
+    "Infiltration"
+  ],
+  "medium": [
+    "Cardiomegaly",
+    "Consolidation",
+    "Edema",
+    "Emphysema",
+    "Fibrosis",
+    "Mass",
+    "Nodule",
+    "Pleural_Thickening",
+    "Pneumothorax"
+  ],
+  "tail": [
+    "Hernia",
+    "Pneumonia"
+  ]
+}

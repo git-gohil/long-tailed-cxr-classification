@@ -1,0 +1,35 @@
+{
+  "dry_run": false,
+  "jobs": {
+    "bce_baseline": {
+      "sweep": "71634",
+      "select": "71635",
+      "final": "71636"
+    },
+    "focal_loss": {
+      "sweep": "71637",
+      "select": "71638",
+      "final": "71639"
+    },
+    "db_loss": {
+      "sweep": "71640",
+      "select": "71641",
+      "final": "71642"
+    },
+    "sqrt_sampling": {
+      "sweep": "71643",
+      "select": "71644",
+      "final": "71645"
+    },
+    "balanced_mixup": {
+      "sweep": "71646",
+      "select": "71647",
+      "final": "71648"
+    },
+    "crt": {
+      "sweep": "71649",
+      "select": "71650",
+      "final": "71651"
+    }
+  }
+}

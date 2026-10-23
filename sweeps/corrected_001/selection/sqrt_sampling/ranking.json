@@ -1,0 +1,44 @@
+[
+  {
+    "candidate": 2,
+    "validation_mAP": 0.2332194480744562,
+    "settings": {
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "batch_size": 16,
+      "epochs": 30,
+      "patience": 7,
+      "gradient_clip": 1.0,
+      "num_workers": 4,
+      "sampling_exponent": 0.75
+    }
+  },
+  {
+    "candidate": 0,
+    "validation_mAP": 0.22898506377455563,
+    "settings": {
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "batch_size": 16,
+      "epochs": 30,
+      "patience": 7,
+      "gradient_clip": 1.0,
+      "num_workers": 4,
+      "sampling_exponent": 0.25
+    }
+  },
+  {
+    "candidate": 1,
+    "validation_mAP": 0.22836729030812017,
+    "settings": {
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "batch_size": 16,
+      "epochs": 30,
+      "patience": 7,
+      "gradient_clip": 1.0,
+      "num_workers": 4,
+      "sampling_exponent": 0.5
+    }
+  }
+]

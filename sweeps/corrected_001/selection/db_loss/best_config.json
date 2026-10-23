@@ -1,0 +1,15 @@
+{
+  "candidate": 2,
+  "validation_mAP": 0.21309323552244433,
+  "settings": {
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "batch_size": 16,
+    "epochs": 30,
+    "patience": 7,
+    "gradient_clip": 1.0,
+    "num_workers": 4,
+    "db_neg_scale": 2,
+    "db_map_beta": 0.2
+  }
+}

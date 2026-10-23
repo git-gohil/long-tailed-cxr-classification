@@ -1,0 +1,32 @@
+/home-mscluster/pgohil/cxr-research/2. Degraded Performance/scripts/train_bce_baseline.py:671: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(device.type == "cuda" and not args.no_amp))
+/home-mscluster/pgohil/cxr-research/2. Degraded Performance/scripts/train_bce_baseline.py:451: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+/home-mscluster/pgohil/cxr-research/2. Degraded Performance/scripts/train_bce_baseline.py:451: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+/home-mscluster/pgohil/cxr-research/2. Degraded Performance/scripts/train_bce_baseline.py:451: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+/home-mscluster/pgohil/cxr-research/2. Degraded Performance/scripts/train_bce_baseline.py:451: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+/home-mscluster/pgohil/cxr-research/2. Degraded Performance/scripts/train_bce_baseline.py:451: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+/home-mscluster/pgohil/cxr-research/2. Degraded Performance/scripts/train_bce_baseline.py:451: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+/home-mscluster/pgohil/cxr-research/2. Degraded Performance/scripts/train_bce_baseline.py:451: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+/home-mscluster/pgohil/cxr-research/2. Degraded Performance/scripts/train_bce_baseline.py:451: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+/home-mscluster/pgohil/cxr-research/2. Degraded Performance/scripts/train_bce_baseline.py:451: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+/home-mscluster/pgohil/cxr-research/2. Degraded Performance/scripts/train_bce_baseline.py:451: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+/home-mscluster/pgohil/cxr-research/2. Degraded Performance/scripts/train_bce_baseline.py:451: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+/home-mscluster/pgohil/cxr-research/2. Degraded Performance/scripts/train_bce_baseline.py:451: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+/home-mscluster/pgohil/cxr-research/2. Degraded Performance/scripts/train_bce_baseline.py:451: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+/home-mscluster/pgohil/cxr-research/2. Degraded Performance/scripts/train_bce_baseline.py:451: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+/home-mscluster/pgohil/cxr-research/2. Degraded Performance/scripts/train_bce_baseline.py:451: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):

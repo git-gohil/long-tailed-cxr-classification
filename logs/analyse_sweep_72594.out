@@ -1,0 +1,16 @@
+Verified 18 complete corrected final runs. Ready for analysis.
+Wrote /home-mscluster/pgohil/cxr-research/sweeps/corrected_001/analysis_recovery_001/summary/results_summary.csv
+Wrote /home-mscluster/pgohil/cxr-research/sweeps/corrected_001/analysis_recovery_001/summary/results_summary.json
+Completed 100/1000 patient bootstrap resamples.
+Completed 200/1000 patient bootstrap resamples.
+Completed 300/1000 patient bootstrap resamples.
+Completed 400/1000 patient bootstrap resamples.
+Completed 500/1000 patient bootstrap resamples.
+Completed 600/1000 patient bootstrap resamples.
+Completed 700/1000 patient bootstrap resamples.
+Completed 800/1000 patient bootstrap resamples.
+Completed 900/1000 patient bootstrap resamples.
+Completed 1000/1000 patient bootstrap resamples.
+Patient-bootstrap aggregation complete: /home-mscluster/pgohil/cxr-research/sweeps/corrected_001/analysis_recovery_001/patient_bootstrap
+The old analysis/results directory was not read or modified.
+Summary tables and patient-bootstrap confidence intervals complete: /home-mscluster/pgohil/cxr-research/sweeps/corrected_001/analysis_recovery_001

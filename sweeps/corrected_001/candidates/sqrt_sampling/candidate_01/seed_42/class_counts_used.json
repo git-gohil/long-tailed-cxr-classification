@@ -1,0 +1,16 @@
+{
+  "Atelectasis": 7267,
+  "Cardiomegaly": 1499,
+  "Consolidation": 2484,
+  "Edema": 1184,
+  "Effusion": 7483,
+  "Emphysema": 1277,
+  "Fibrosis": 1091,
+  "Hernia": 124,
+  "Infiltration": 12000,
+  "Mass": 3559,
+  "Nodule": 4094,
+  "Pleural_Thickening": 1947,
+  "Pneumonia": 757,
+  "Pneumothorax": 2330
+}

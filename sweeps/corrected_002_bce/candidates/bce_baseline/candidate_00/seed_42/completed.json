@@ -1,0 +1,18 @@
+{
+  "method": "bce_baseline",
+  "seed": 42,
+  "settings": {
+    "lr": 3e-05,
+    "weight_decay": 0.0001,
+    "batch_size": 16,
+    "epochs": 30,
+    "patience": 7,
+    "gradient_clip": 1.0,
+    "num_workers": 4
+  },
+  "output_sha256": {
+    "config.json": "4de600aa251b4fe8d45fe6cae83712f06f19a2b7d45b0aecdced996d07704421",
+    "checkpoint_best.pt": "c7afe8ee9c410c5180848f98f3c11b08113ef8f2400ab79e2792640e6ae56809",
+    "validation_metrics.json": "f81773f7244ca13a947a642294c92c5611ce54c4c0b718211480663314c5bbc8"
+  }
+}
