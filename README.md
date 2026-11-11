@@ -118,3 +118,119 @@ relevant submission lines, keeping the BCE submission and dependency for cRT.
 Monitor jobs with `squeue -u "$USER"`. Training checkpoints, configurations, and
 validation metrics are written to
 `runs/<CXR_RUN_NAME>/<method>/seed_<seed>/`; Slurm logs are written to `logs/`.
+
+## Evaluate bACC after all methods finish
+
+Run this final step **after all selected training jobs, including cRT, have
+finished successfully**. It reports test balanced accuracy at 0.5 and test
+balanced accuracy with one threshold per disease, method, and seed chosen to
+maximize **validation bACC**. Test labels are used only for final scoring.
+The existing `eval_val/tuned_thresholds.json` optimizes F1; this analysis saves
+its own bACC thresholds separately.
+
+The training commands above save validation `.npz` files but do not export test
+predictions. The following job first uses the existing checkpoint evaluator to
+create `eval_val/` and `eval_test/`, then runs the bACC analysis at the end.
+Existing complete evaluations are verified and reused. This step uses the
+already trained checkpoints; it does not train models again.
+
+Submit from **Bash on the cluster login node**, using the same run name as the
+training jobs:
+
+```bash
+cd /home-mscluster/pgohil/cxr-research
+mkdir -p logs
+export CXR_RUN_NAME=report_selected_001
+sbatch --job-name=bacc-final --export=ALL,CXR_RUN_NAME <<'SLURM'
+#!/usr/bin/env bash
+#SBATCH --partition=bigbatch
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=48G
+#SBATCH --time=24:00:00
+#SBATCH --exclude=mscluster51
+#SBATCH --output=logs/bacc_final_%j.out
+#SBATCH --error=logs/bacc_final_%j.err
+
+set -euo pipefail
+PROJECT_ROOT=/home-mscluster/pgohil/cxr-research
+CONTAINER=/usr/local/containers/anaconda/anaconda-2025-12-2.sif
+ENV_PYTHON=/home-mscluster/pgohil/.conda/envs/cxr-longtail/bin/python
+RUNS_DIR="$PROJECT_ROOT/runs/$CXR_RUN_NAME"
+METHODS=(bce_baseline focal_loss db_loss_natural sqrt_sampling crt balanced_mixup)
+
+cd "$PROJECT_ROOT"
+module purge
+unset LD_PRELOAD
+export MKL_THREADING_LAYER=GNU
+export OMP_NUM_THREADS="$SLURM_CPUS_PER_TASK"
+export MKL_NUM_THREADS="$SLURM_CPUS_PER_TASK"
+
+apptainer exec --nv --bind /datasets:/datasets "$CONTAINER" "$ENV_PYTHON" -u \
+  common/evaluate_final_test_all.py --project-root "$PROJECT_ROOT" \
+  --runs-dir "$RUNS_DIR" --dataset-root /datasets/pgohil \
+  --methods "${METHODS[@]}" --seeds 42 123 2024 --device cuda
+
+apptainer exec "$CONTAINER" "$ENV_PYTHON" -u \
+  analysis/evaluate_bacc_from_saved.py --runs-dir "$RUNS_DIR" \
+  --output-dir "$PROJECT_ROOT/analysis/bacc_results/$CXR_RUN_NAME" \
+  --methods "${METHODS[@]}" --seeds 42 123 2024 \
+  --class-groups "$PROJECT_ROOT/1. Data analysis + inspection/results/data/class_groups.csv"
+SLURM
+```
+
+If both evaluation folders already exist, run only the following array analysis
+from the project root, in an environment with Python and NumPy. It runs on CPU
+and does not need checkpoints, original images, or PyTorch:
+
+```bash
+python analysis/evaluate_bacc_from_saved.py \
+  --runs-dir runs/report_selected_001 \
+  --output-dir analysis/bacc_results/report_selected_001 \
+  --methods bce_baseline focal_loss db_loss_natural sqrt_sampling crt balanced_mixup \
+  --seeds 42 123 2024 \
+  --class-groups "1. Data analysis + inspection/results/data/class_groups.csv"
+```
+
+For sweep results, set `--runs-dir` to the relevant `sweeps/<experiment>/final`
+directory or an existing combined `analysis/<comparison>/runs` directory.
+Set `--methods` and `--seeds` to exactly the completed runs you want to compare;
+`db_loss` is also supported separately from `db_loss_natural`. Use a new output
+directory for each analysis, such as `analysis/bacc_results/report_selected_001_v2`
+when repeating an analysis. Existing output directories are never overwritten.
+
+Each `<runs-dir>/<method>/seed_<seed>/` must contain `config.json` and, in **both**
+`eval_val/` and `eval_test/`, `predictions.npy`, `labels.npy`, `image_ids.npy`,
+`patient_ids.npy`, and `evaluation_complete.json`. These are the existing
+evaluator's outputs. The script checks their recorded hashes, matching
+validation/test checkpoint fingerprints, disease order, identical evaluation
+rows across runs, and disjoint validation/test images and patients. It rejects
+missing runs, subset/debug runs, and diseases lacking positives or negatives;
+it does not silently omit them. `logits.npy`, F1 thresholds, and existing metric
+JSON files are not needed. Omit `--class-groups` for overall/per-disease results
+only; when supplied, its contents must match the recorded evaluation inputs.
+
+Threshold selection searches every distinct validation probability, keeping
+tied scores together, plus an all-negative endpoint just above the largest
+validation probability. Equal validation bACC maxima use the highest candidate
+threshold. An all-negative endpoint can be slightly above 1 when the maximum
+probability is 1. bACC is `(sensitivity + specificity) / 2`; overall and group
+scores average diseases equally, then summarize the separate seed scores.
+This tunes decision thresholds for the saved models; their original checkpoint
+and hyperparameter selection remains based on validation mAP.
+
+The job log prints mean test bACC and sample standard deviation as percentages.
+The four files below are created in `analysis/bacc_results/<CXR_RUN_NAME>/`:
+
+| File | Contents |
+| --- | --- |
+| `bacc_thresholds.json` | Validation-bACC-selected thresholds, validation scores, tuning rule, and input fingerprints for every method/seed |
+| `bacc_per_class.csv` | Disease-level thresholds, validation bACC, test bACC at 0.5 and tuned thresholds, sensitivity, specificity, and positive/negative counts |
+| `bacc_by_seed.csv` | Overall and optional head/medium/tail test metrics for each method/seed |
+| `bacc_summary.csv` | Test bACC mean and sample standard deviation across seeds for each method/group, with seed and class counts |
+
+Metric values in CSV/JSON are fractions from 0 to 1; multiply by 100 for
+percentages. With one seed, the sample-standard-deviation fields are blank.
+The script also accepts `--self-test` to check the calculation and file workflow
+using temporary synthetic data, without needing saved runs.
